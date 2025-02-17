@@ -1,0 +1,74 @@
+/* Add application styles & imports to this file! */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Spotify-inspired theme */
+:root {
+  --spotify-green: #1DB954;
+  --spotify-black: #191414;
+  --spotify-dark-gray: #282828;
+  --spotify-light-gray: #B3B3B3;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background-color: var(--spotify-green) !important;
+}
+
+.mat-toolbar.mat-primary {
+  background-color: var(--spotify-black);
+}
+
+body {
+  background-color: var(--spotify-black);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--spotify-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spotify-light-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--spotify-green);
+}
+
+/* Snackbar styles */
+.success-snackbar {
+  background: var(--spotify-green);
+  color: white;
+}
+
+.error-snackbar {
+  background: #d32f2f;
+  color: white;
+}
+
+.mat-mdc-snack-bar-container {
+  &.success-snackbar {
+    --mdc-snackbar-container-color: var(--spotify-green);
+    --mat-mdc-snack-bar-button-color: white;
+  }
+  
+  &.error-snackbar {
+    --mdc-snackbar-container-color: #d32f2f;
+    --mat-mdc-snack-bar-button-color: white;
+  }
+}
